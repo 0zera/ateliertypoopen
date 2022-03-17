@@ -19,7 +19,7 @@ document.body.style.fontFamily = fonts[y];
 
 });
 
-// le background derroère les popups qui doit changer d'opacité
+// le background derrière les popups qui doit changer d'opacité
 var bg = document.getElementsByTagName("main")[0];
 
 ///////// Afficher un popup chaque fois qu'on clique sur un span.popup ////////
@@ -35,14 +35,15 @@ function showPopup(clean) {
   if(window.innerWidth >= 600) {
     elem = document.getElementById(clean);
 
-    elemH = parseInt(elem.clientHeight);
     elemW = parseInt(elem.style.width);
-
-    topPos = 10 + Math.floor(Math.random() * (window.innerHeight - elemH)) + 'px';
-     leftPos = 10 + Math.floor(Math.random() * (window.innerWidth - elemW)) + 'px';
-
+    leftPos = 20 + Math.floor(Math.random() * (window.innerWidth - elemW - 50)) + 'px';
     elem.style.left = leftPos;
-    elem.style.top = topPos;
+
+    if (window.innerHeight >= 700) {
+      elemH = parseInt(elem.clientHeight);
+      topPos = 20 + Math.floor(Math.random() * (window.innerHeight - elemH - 50)) + 'px';
+      elem.style.top = topPos;
+    }
 
   }
 }

@@ -143,6 +143,8 @@ body{
   font-size: var(--global-font-size);
   line-height: var(--global-line-height);
   background-color: lightgray;
+  overflow: hidden!important;
+
   /*
   background: rgb(211,211,211);
   background: linear-gradient(0deg, rgba(211,211,211,0) 0%, rgba(255,255,255,0) 53%, rgba(255,0,0,1) 100%, rgba(241,66,66,1) 100%, rgba(255,0,0,0.48503151260504207) 100%);
@@ -154,11 +156,12 @@ main{
   padding: var(--global-margins);
   padding-top: calc(var(--global-margins) - 4px);
   /*height: calc(100vh - 12rem);*/
-  overflow-y: auto;
 
   font-weight: lighter;
   font-variation-settings: 'wght' 0;
   transition-duration: 0.5s;
+
+  overflow: hidden!important;
 }
 
 span{
@@ -186,7 +189,7 @@ nav{
   align-items: center;
   position: fixed;
   bottom: 0px;
-  z-index: 1000;
+  z-index: 0;
 
   padding-top: var(--global-margins);
   padding-bottom: var(--global-margins);
@@ -227,6 +230,97 @@ nav{
 }
 .links a:last-child{
   margin-right: : 0;
+}
+
+
+.content{
+  border-radius: 1.5rem;
+  width: 380px;
+  height: 580px;
+  overflow: hidden!important;
+}
+
+.landscape{
+  border-radius: 1.5rem;
+  width: 550px;
+  height: 309px;
+}
+
+.dialog iframe{
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+.dialog {
+	display: none; /* not visible by default */
+	color: red;
+	position: absolute;
+
+  color: white;
+  overflow: auto;
+  font-size: 1em;
+
+  overflow: hidden!important;
+}
+
+
+.titlebar {
+	height: 35px; /* same as .dialog>button height */
+	width: auto;; /* same as .dialog>button height */
+	line-height: 32px; /* same as .dialog>button height */
+  margin-right: 0.5rem;
+	vertical-align: middle;
+	font-size: 1.2em;
+	white-space: nowrap;
+	cursor: move;
+  color: black;
+  font-size: 1.2em;
+  background-color: white;
+  color: black;
+  border-radius: 100px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  font-size: 1.9rem;
+
+
+}
+
+
+.flextest{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+
+}
+.close{
+  background-color: black;
+  border-radius: 100px;
+  border: none;
+  width: 40px;
+  height: 35px; /* same as .dialog>button height */
+
+}
+.close svg{
+  fill: white;
+  height: 14px;
+  width: 13px;
+}
+.dialog .buttonpane:before {
+	width: 100%;
+	height: 0;
+	border-bottom: 1px solid; /* change allowed */
+	content: '';
+	position: absolute;
+	top: -16px; /* change allowed */
+}
+.dialog .buttonpane {
+	width: 100%;
+	position: absolute;
+	bottom: 16px; /* change allowed */
+	right: 16px; /* change NOT allowed */
+	white-space: nowrap; /* keep buttons on one line */
 }
 
 
@@ -271,191 +365,26 @@ nav{
     box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.2);
   }
 
-  main{
-    /* height: calc(100vh + 5rem);
-    overflow-y: auto;
-
-    font-weight: lighter;
-    font-variation-settings: 'wght' 0;
-    transition-duration: 0.5s;
-     */
+  .landscape{
+    border-radius: 1.5rem;
+    width: calc(100vw - 4rem);
+    height: 209px!important;
   }
 
+  .content{
+    border-radius: 1.5rem;
+    width: calc(100vw - 15px);
+    max-width: 350px;
+    height: 72vh;
+  }
 
-}
+  .dialog{
+    margin-top: 15px;
 
+    /*
+    -webkit-box-shadow: 0px 0px 0px 1500px rgba(255,255,255,0.46);
+    box-shadow: 0px 0px 0px 1509px rgba(255,255,255,0.46);
+    */
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*
- * Stylesheet for Draggable and Resizable Dialog Box
- *
- * Designed by ZulNs, @Gorontalo, Indonesia, 7 June 2017
- * Extended by FrankBuchholz, Germany, 2019
- * You can change all colors
- * You can change some of the sizes without expecting issues, see below
-*/
-
-.content{
-  border-radius: 1.5rem;
-  width: 350px!important;
-  height: 550px!important;
-}
-.dialog iframe{
-  border-radius: inherit;
-  width: 100%!important;
-  height: 100%!important;
-  background-color: white;
-}
-.dialog {
-	display: none; /* not visible by default */
-	color: red;
-	position: absolute;
-
-  min-width: 350px!important;
-  min-height: 600px!important;
-
-  max-width: 350px!important;
-  max-height: 600px!important;
-
-}
-.titlebar {
-	height: 35px; /* same as .dialog>button height */
-	width: auto;; /* same as .dialog>button height */
-	line-height: 32px; /* same as .dialog>button height */
-  margin-right: 0.5rem;
-	vertical-align: middle;
-	font-size: 1.2em;
-	white-space: nowrap;
-	cursor: move;
-  color: black;
-  font-size: 1.2em;
-  background-color: white;
-  color: black;
-  border-radius: 100px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-
-  font-size: 1.9rem;
-
-
-}
-.dialog{
-  /*
-	position: absolute;
-
-	top: 48px;
-	right: 0px;
-  */
-  color: white;
-	overflow: auto;
-	font-size: 1em;
-}
-
-
-.flextest{
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 1rem;
-
-}
-.close{
-background-color: black;
-border-radius: 100px;
-border: none;
-width: 40px;
-height: 35px; /* same as .dialog>button height */
-
-}
-
-.close svg{
-  fill: white;
-  height: 14px;
-  width: 13px;
-}
-.content{
-
-}
-.dialog .buttonpane:before {
-	width: 100%;
-	height: 0;
-	border-bottom: 1px solid; /* change allowed */
-	content: '';
-	position: absolute;
-	top: -16px; /* change allowed */
-}
-.dialog .buttonpane {
-	width: 100%;
-	position: absolute;
-	bottom: 16px; /* change allowed */
-	right: 16px; /* change NOT allowed */
-	white-space: nowrap; /* keep buttons on one line */
-}
-.dialog .buttonset {
-	float: right;
-}
-.dialog button {
-	-webkit-transition: 0.25s;
-	transition: 0.25s;
-	color: #fff;
-}
-.dialog button::-moz-focus-inner {
-	border: 0;
-}
-/* .dialog button.hover, */ /* Let's use standard hover */
-.dialog button:hover,
-.dialog button.active
-{
-	cursor: pointer;
-}
-.dialog>button {
-	width: 32px; /* change NOT allowed */
-	height: 32px; /* same as .dialog .titlebar height */
-	position: absolute;
-	top: 0px;
-	right: 0;
-	padding: 0;
-	border: 0;
-	font-size: 1.4em;
-	background: red;
-  border-radius: 15px;
-}
-/* .dialog>button.hover, */
-.dialog>button.active {
-	background: #f55; /* irrelevant */
-	border: 1px solid #ddd; /* irrelevant */
-}
-.dialog .buttonset button {
-	height: 32px; /* change allowed */
-	width: 64px; /* change allowed */
-	font-size: 1.1em;
-	padding: 0; /* irrelevant */
-	border: 2px solid #fff; /* change allowed */
-	border-radius: 4px; /* change allowed */
-	margin-left: 16px; /* change NOT allowed */
-	background: pink;
-}
-.dialog .buttonset button:first-child {
-	margin-left: 0;
-
-}
-/* .dialog .buttonset button.hover, */
-.dialog .buttonset button:hover,
-.dialog .buttonset button.focus
-{
-	box-shadow: inset -32px 0 0 0 #17a, inset 32px 0 0 0 #17a;
-}
-.dialog .buttonset button.active {
-	background: #1a7;
-	border-color: #ddd;
 }

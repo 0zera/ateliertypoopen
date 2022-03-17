@@ -4,19 +4,15 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="styles/main.css">
+    <script src="js/script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="apple-touch-icon" href="logo.png">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
-    <link rel="stylesheet" href="/css/master.css">
     <script src="scripts/script.js" defer></script>
     <script type="text/javascript" src="scripts/draggable-resizable-dialog.js"></script>
+    <link rel="stylesheet" href="/css/master.css">
 
-    <style type="text/css" media="screen">
-      .dialog {
-        border: solid black 1px;
-      }
-    </style>
 
     <link rel="preload" href="fonts/L10-Regular.ttf'" as="font" crossorigin="anonymous" />
     <link rel="preload" href="fonts/atraktGX.ttf" as="font" crossorigin="anonymous" />
@@ -39,8 +35,8 @@
         Bienvenue sur le site des journées portes ouvertes de <span class="popup">l'Atelier de typographie</span> de La Cambre.
         Nous vous y accueillerons afin de vous donner un aperçu de nos
         productions <span class="popup">éditoriales</span> et <span class="popup">typographiques</span>, nos travaux à
-        <span class="popup">l'imprimerie</span>, nos <span class="popup">workshops</span>, nos <span class="popup" >excursions</span>, et nos <span class="popup">jury</span>.
-        On vous propose aussi un live pour que vous puissiez poser toutes vos questions.
+        <span class="popup">l'imprimerie</span>, nos <span class="popup">workshops</span>, nos <span class="popup">excursions</span>, et nos <span class="popup">jury</span>.
+        On vous propose aussi un <span class="popup">live</span> pour que vous puissiez poser toutes vos questions.
         Sur place, stand de gâteaux, vente de divers objets éditoriaux, exposition des projets,
         rencontre avec les étudiant⸱e⸱s et enseignant⸱e⸱s, et tout un tas de
         surprises sont au <span class="popup">programme</span> de ces OPEN DAYS.
@@ -58,10 +54,14 @@
     </nav>
 
 
-    <div id="atelier" class="dialog">
+
+
+
+    <div id="atelier" class="dialog mobile">
+
       <div class="flextest">
          <div class="titlebar">
-           Atelier
+           Workshops
          </div>
          <button class="close" name="close">
            <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
@@ -71,7 +71,7 @@
       </div>
 
       <div class="content">
-        <!-- <iframe src="https://lacambretypo.be/fr"></iframe> -->
+        <iframe src="https://lacambretypo.be/fr"></iframe>
       </div>
     </div>
 
@@ -80,7 +80,7 @@
 
       <div class="flextest">
          <div class="titlebar">
-           Éditoriales
+           Workshops
          </div>
          <button class="close" name="close">
            <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
@@ -90,7 +90,7 @@
       </div>
 
       <div class="content">
-        <!-- <iframe src="https://lacambretypo.be/fr"></iframe> -->
+        <iframe src="https://lacambretypo.be/fr"></iframe>
       </div>
     </div>
 
@@ -99,7 +99,7 @@
 
       <div class="flextest">
          <div class="titlebar">
-           Typographiques
+           Workshops
          </div>
          <button class="close" name="close">
            <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
@@ -109,15 +109,16 @@
       </div>
 
       <div class="content">
-        <!-- <iframe src="https://lacambretypo.be/fr"></iframe> -->
+        <iframe src="https://lacambretypo.be/fr"></iframe>
       </div>
     </div>
+
 
     <div id="imprimerie" class="dialog">
 
       <div class="flextest">
          <div class="titlebar">
-           Imprimerie
+           Workshops
          </div>
          <button class="close" name="close">
            <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
@@ -127,7 +128,27 @@
       </div>
 
       <div class="content">
-        <!-- <iframe src="https://lacambretypo.be/fr"></iframe> -->
+        <iframe src="https://lacambretypo.be/fr"></iframe>
+      </div>
+    </div>
+
+
+
+    <div id="imprimerie" class="dialog">
+
+      <div class="flextest">
+         <div class="titlebar">
+           Workshops
+         </div>
+         <button class="close" name="close">
+           <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
+             <path id="Tracé_1" data-name="Tracé 1" d="M3.678.643a1.267,1.267,0,0,0,.588.335,1.311,1.311,0,0,0,.677,0A1.361,1.361,0,0,0,5.537.643l8.094-8.107L21.752.643a1.268,1.268,0,0,0,.916.376A1.242,1.242,0,0,0,23.6.643a1.274,1.274,0,0,0,.383-.937,1.252,1.252,0,0,0-.369-.923L15.49-9.324l8.121-8.094a1.26,1.26,0,0,0,.369-.93,1.237,1.237,0,0,0-.383-.93,1.29,1.29,0,0,0-.93-.369,1.244,1.244,0,0,0-.916.369L13.631-11.17,5.537-19.277a1.361,1.361,0,0,0-.595-.335,1.361,1.361,0,0,0-.677-.007,1.171,1.171,0,0,0-.588.342,1.3,1.3,0,0,0-.328.595,1.416,1.416,0,0,0,0,.677,1.217,1.217,0,0,0,.328.588l8.094,8.094L3.678-1.217a1.267,1.267,0,0,0-.335.588,1.389,1.389,0,0,0-.007.684A1.171,1.171,0,0,0,3.678.643Z" transform="translate(-3.297 19.659)"/>
+           </svg>
+         </button>
+      </div>
+
+      <div class="content">
+        <iframe src="https://lacambretypo.be/fr"></iframe>
       </div>
     </div>
 
@@ -145,15 +166,16 @@
       </div>
 
       <div class="content">
-        <!-- <iframe src="https://lacambretypo.be/fr"></iframe> -->
+        <iframe src="https://lacambretypo.be/fr"></iframe>
       </div>
     </div>
 
+
     <div id="excursions" class="dialog">
 
-      <div class="flextest">
+      <div class="flextest mobile">
          <div class="titlebar">
-           Excursions
+           Workshops
          </div>
          <button class="close" name="close">
            <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
@@ -163,7 +185,50 @@
       </div>
 
       <div class="content">
-        <!-- <iframe src="https://lacambretypo.be/fr"></iframe> -->
+        <iframe src="https://lacambretypo.be/fr"></iframe>
+      </div>
+    </div>
+
+    <div id="live" class="dialog">
+
+      <div class="flextest">
+         <div class="titlebar">
+           Workshops
+         </div>
+         <button class="close" name="close">
+           <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
+             <path id="Tracé_1" data-name="Tracé 1" d="M3.678.643a1.267,1.267,0,0,0,.588.335,1.311,1.311,0,0,0,.677,0A1.361,1.361,0,0,0,5.537.643l8.094-8.107L21.752.643a1.268,1.268,0,0,0,.916.376A1.242,1.242,0,0,0,23.6.643a1.274,1.274,0,0,0,.383-.937,1.252,1.252,0,0,0-.369-.923L15.49-9.324l8.121-8.094a1.26,1.26,0,0,0,.369-.93,1.237,1.237,0,0,0-.383-.93,1.29,1.29,0,0,0-.93-.369,1.244,1.244,0,0,0-.916.369L13.631-11.17,5.537-19.277a1.361,1.361,0,0,0-.595-.335,1.361,1.361,0,0,0-.677-.007,1.171,1.171,0,0,0-.588.342,1.3,1.3,0,0,0-.328.595,1.416,1.416,0,0,0,0,.677,1.217,1.217,0,0,0,.328.588l8.094,8.094L3.678-1.217a1.267,1.267,0,0,0-.335.588,1.389,1.389,0,0,0-.007.684A1.171,1.171,0,0,0,3.678.643Z" transform="translate(-3.297 19.659)"/>
+           </svg>
+         </button>
+      </div>
+
+      <div class="content landscape">
+        <iframe
+              id="twitchos"
+              src="https://player.twitch.tv/?channel=lacambre_typo&parent=typopwa.netlify.app"
+              parent="localhost"
+              height="100%"
+              width="100%"
+              allowfullscreen="true">
+        </iframe>
+      </div>
+    </div>
+
+    <div id="excursions" class="dialog">
+
+      <div class="flextest">
+         <div class="titlebar">
+           Workshops
+         </div>
+         <button class="close" name="close">
+           <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
+             <path id="Tracé_1" data-name="Tracé 1" d="M3.678.643a1.267,1.267,0,0,0,.588.335,1.311,1.311,0,0,0,.677,0A1.361,1.361,0,0,0,5.537.643l8.094-8.107L21.752.643a1.268,1.268,0,0,0,.916.376A1.242,1.242,0,0,0,23.6.643a1.274,1.274,0,0,0,.383-.937,1.252,1.252,0,0,0-.369-.923L15.49-9.324l8.121-8.094a1.26,1.26,0,0,0,.369-.93,1.237,1.237,0,0,0-.383-.93,1.29,1.29,0,0,0-.93-.369,1.244,1.244,0,0,0-.916.369L13.631-11.17,5.537-19.277a1.361,1.361,0,0,0-.595-.335,1.361,1.361,0,0,0-.677-.007,1.171,1.171,0,0,0-.588.342,1.3,1.3,0,0,0-.328.595,1.416,1.416,0,0,0,0,.677,1.217,1.217,0,0,0,.328.588l8.094,8.094L3.678-1.217a1.267,1.267,0,0,0-.335.588,1.389,1.389,0,0,0-.007.684A1.171,1.171,0,0,0,3.678.643Z" transform="translate(-3.297 19.659)"/>
+           </svg>
+         </button>
+      </div>
+
+      <div class="content">
+        <iframe src="https://lacambretypo.be/fr"></iframe>
       </div>
     </div>
 
@@ -172,7 +237,7 @@
 
       <div class="flextest">
          <div class="titlebar">
-           Jury
+           Workshops
          </div>
          <button class="close" name="close">
            <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
@@ -182,7 +247,7 @@
       </div>
 
       <div class="content">
-        <!-- <iframe src="https://lacambretypo.be/fr"></iframe> -->
+        <iframe src="https://lacambretypo.be/fr"></iframe>
       </div>
     </div>
 
@@ -190,7 +255,7 @@
 
       <div class="flextest">
          <div class="titlebar">
-           Programme
+           Workshops
          </div>
          <button class="close" name="close">
            <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
@@ -200,7 +265,7 @@
       </div>
 
       <div class="content">
-        <!-- <iframe src="https://lacambretypo.be/fr"></iframe> -->
+        <iframe src="https://lacambretypo.be/fr"></iframe>
       </div>
     </div>
 
