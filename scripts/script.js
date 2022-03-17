@@ -30,12 +30,27 @@ function showPopup(clean) {
   var popup;
   if (!popup) popup = new DialogBox(clean);
   popup.showDialog();
+
+  // corriger la position sur desktop -> mettre une position aléatoire
+  if(window.innerWidth >= 600) {
+    elem = document.getElementById(clean);
+
+    elemH = parseInt(elem.clientHeight);
+    elemW = parseInt(elem.style.width);
+
+    topPos = 10 + Math.floor(Math.random() * (window.innerHeight - elemH)) + 'px';
+     leftPos = 10 + Math.floor(Math.random() * (window.innerWidth - elemW)) + 'px';
+
+    elem.style.left = leftPos;
+    elem.style.top = topPos;
+
+  }
 }
 
 function openPopup(el) {
   elemId = el.target.innerHTML;
   clean = elemId.toLowerCase().replace(/^l\'/g, '').replace(/ .*/, '');
-  bg.style.opacity = .4;
+  // bg.style.opacity = .4;
   showPopup(clean);
 }
 
@@ -43,23 +58,28 @@ function openPopup(el) {
   pop.addEventListener("click", openPopup);
 });
 
-
 var dialogs = document.body.querySelectorAll('.dialog');
 var closeButtons = document.body.querySelectorAll('.dialog button[name="close"]');
+
 // Quand on clique sur un bouton fermer, checke s'il y a d'autres popups ouverts
-function checkDisplay() {
+function checkDisplay(event) {
+  parentDialog = event.target.parentElement.parentElement;
+  // console.log(parentDialog);
+
+  // parentDialog.style.display = "none";
+
   var displayed = [];
   [...dialogs].forEach(function(dial) {
     displayed.push(dial.style.display);
   });
-  // console.dir(displayed);
+
+  // console.log(displayed);
+
   if (!displayed.includes("block")) {
     bg.style.opacity = 1;
   }
 }
 
 [...closeButtons].forEach(function(cbut) {
-  cbut.addEventListener("click", function() {
-    checkDisplay();
-  })
+  // cbut.addEventListener("click", checkDisplay, cbut);
 });
