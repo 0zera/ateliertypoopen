@@ -18,8 +18,9 @@ html, body, div, span, applet, object, iframe,
   	font-size: 100%;
   	font: inherit;
   	vertical-align: baseline;
+    box-sizing: border-box;
+}
 
-  }
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure,
   footer, header, hgroup, menu, nav, section {
@@ -44,7 +45,6 @@ html, body, div, span, applet, object, iframe,
   	border-spacing: 0;
   }
 
-
 /* FIX FONT SIZE */
 
 :root{
@@ -55,79 +55,93 @@ html, body, div, span, applet, object, iframe,
   --global-font-size: 2.2rem;
   --global-margins: 1.4rem;
   --global-line-height: 2.5rem;
+  --bg-color: lightgray;
 }
+
 @font-face {
     font-family: 'L10';
     src: url('../fonts/L10-Regular.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'atrakt';
     src: url('../fonts/atraktGX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Bright Hope';
     src: url('../fonts/BrightHopeGX.ttf') format('truetype');
     font-weight: 900!important;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'atrakt';
     src: url('../fonts/atraktGX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Carlos';
     src: url('../fonts/CarlosGX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Fonte variable';
     src: url('../fonts/FontevariableGX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Ceefax';
     src: url('../fonts/CeefaxGX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Gothic Revival 1';
     src: url('../fonts/GothicRevival1GX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
+
 @font-face {
-    font-family: 'La Curieuse';
+  font-family: 'La Curieuse';
     src: url('../fonts/LaCurieuseGX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Notam Standard';
     src: url('../fonts/NotamStandardGX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'TOAD.22.12';
     src: url('../fonts/TOAD.GX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'VG_Aldiviva_07';
     src: url('../fonts/Aldiviva_GX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Ziggy Sans';
     src: url('../fonts/ZiggySansGX.ttf') format('truetype');
@@ -136,13 +150,15 @@ html, body, div, span, applet, object, iframe,
 }
 
 html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'L10';
 }
+
 body{
   font-size: var(--global-font-size);
   line-height: var(--global-line-height);
-  background-color: lightgray;
+  background: var(--bg-color);
   overflow: hidden!important;
 
   /*
@@ -155,30 +171,26 @@ body{
 main{
   padding: var(--global-margins);
   padding-top: calc(var(--global-margins) - 4px);
-  /*height: calc(100vh - 12rem);*/
-
-  font-weight: lighter;
-  font-variation-settings: 'wght' 0;
-  transition-duration: 0.5s;
-
   overflow: hidden!important;
 }
 
 span{
   color: blue;
   cursor: pointer;
-  transition-duration: 0.5s;
+  font-weight: lighter;
+  font-variation-settings: 'wght' 0;
+  transition: font-variation-settings .8s;
 }
+
 span:hover{
-  /*font-family: "TOAD.22.12" !important;*/
   font-weight: bolder;
   font-variation-settings: 'wght' 900;
-  transition-duration: 0.5s;
 }
 
 span::after{
   content: "]"
 }
+
 span::before{
   content: "["
 }
@@ -199,13 +211,20 @@ nav{
 .links{
   margin-right: var(--global-margins);
 }
+
 .links a{
   text-decoration: none;
   color: black;
+  cursor: alias;
+  margin-right: 1rem;
 }
+
+.links a:last-child{
+  margin-right: : 0;
+}
+
 #switchfont{
-  background-color: lightgray;
-  background-color: black;
+  background: black;
   color: white;
   border: none;
   padding: 5px;
@@ -213,25 +232,22 @@ nav{
   padding-right: 1rem;
   border-radius: 2rem;
   text-align: left;
-
-  font-size: var(--global-font-size);
   margin-left: var(--global-margins);
-
-  font-family: inherit;
   -webkit-box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.2);
   box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.2);
-}
-#switchfont:hover{
-  background-color: black;
-  color: white;
-}
-.links a{
-  margin-right: 1rem;
-}
-.links a:last-child{
-  margin-right: : 0;
+
+  font-size: var(--global-font-size);
+  font-family: inherit;
+  font-variation-settings: 'wght' 0;
+  transition: font-variation-settings .8s;
 }
 
+#switchfont:hover{
+  background: black;
+  color: white;
+  cursor: pointer;
+  font-variation-settings: 'wght' 900;
+}
 
 .content{
   border-radius: 1.5rem;
@@ -252,18 +268,19 @@ nav{
   height: 100%;
   background-color: white;
 }
+
 .dialog {
 	display: none; /* not visible by default */
-	color: red;
 	position: absolute;
-
-  color: white;
+  /* color: white; */
   overflow: auto;
   font-size: 1em;
-
   overflow: hidden!important;
 }
 
+.dialog .content {
+  background: var(--bg-color);
+}
 
 .titlebar {
 	height: 35px; /* same as .dialog>button height */
@@ -281,32 +298,29 @@ nav{
   border-radius: 100px;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-
   font-size: 1.9rem;
-
-
 }
-
 
 .flextest{
   display: flex;
   justify-content: flex-end;
   margin-bottom: 1rem;
-
 }
+
 .close{
   background-color: black;
   border-radius: 100px;
   border: none;
   width: 40px;
   height: 35px; /* same as .dialog>button height */
-
 }
+
 .close svg{
   fill: white;
   height: 14px;
   width: 13px;
 }
+
 .dialog .buttonpane:before {
 	width: 100%;
 	height: 0;
@@ -315,6 +329,7 @@ nav{
 	position: absolute;
 	top: -16px; /* change allowed */
 }
+
 .dialog .buttonpane {
 	width: 100%;
 	position: absolute;
@@ -325,9 +340,9 @@ nav{
 
 
 
+
 /* MOBILE*/
 @media (max-width: 600px){
-
   :root{
     /* VARIABLES FOR MOBILE*/
     --global-font-size: 1.8rem;
@@ -340,10 +355,12 @@ nav{
     flex-direction: column;
     align-items: flex-end;
   }
+
   .links a{
     margin-right: 0px;
 
   }
+
   nav{
     align-items: flex-end;
   }
@@ -380,7 +397,6 @@ nav{
 
   .dialog{
     margin-top: 15px;
-
     /*
     -webkit-box-shadow: 0px 0px 0px 1500px rgba(255,255,255,0.46);
     box-shadow: 0px 0px 0px 1509px rgba(255,255,255,0.46);
