@@ -36,7 +36,7 @@
         Nous vous y accueillerons afin de vous donner un aperçu de nos
         productions <span class="popup">éditoriales</span> et <span class="popup">typographiques</span>, nos travaux à
         <span class="popup">l'imprimerie</span>, nos <span class="popup">workshops</span>, nos <span class="popup">excursions</span>, et nos <span class="popup">jury</span>.
-        On vous propose aussi un <span class="popup">live</span> pour que vous puissiez poser toutes vos questions.
+        On vous propose aussi un <span id="liveloop" class="popup">LIVE</span> et un <span class="popup">CHAT</span> pour que vous puissiez poser toutes vos questions.
         Sur place, stand de gâteaux, vente de divers objets éditoriaux, exposition des projets,
         rencontre avec les étudiant⸱e⸱s et enseignant⸱e⸱s, et tout un tas de
         surprises sont au <span class="popup">programme</span> de ces OPEN DAYS.
@@ -47,21 +47,21 @@
       <a id="switchfont" type="button" name="button">Basculer Fonte</a>
 
       <div class="links">
-          <a href="#">Website</a>
-          <a href="#">Instagram</a>
-          <a href="#">Contact</a>
+          <a href="https://lacambretypo.be/fr">Website</a>
+          <a href="https://www.instagram.com/atelier_de_typographie/">Instagram</a>
+          <a href="mailto:atelier@lacambretypo.be">Contact</a>
       </div>
     </nav>
 
 
 
 
-
+    <!-- ATELIER -->
     <div id="atelier" class="dialog mobile">
 
       <div class="flextest">
          <div class="titlebar">
-           Workshops
+           L'atelier de Typographie
          </div>
          <button class="close" name="close">
            <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
@@ -70,17 +70,32 @@
          </button>
       </div>
 
-      <div class="content">
-        <iframe src="https://lacambretypo.be/fr"></iframe>
+      <div class="content carousel">
+
+          <div class="carousel-items">
+            <video class="items" autoplay="" muted="" playsinline="" loop="">
+              <source src="medias/atelier/atelier1.mp4" type="video/mp4">
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+          </div>
+
+          <div class="carousel-items">
+            <video class="items"autoplay="" muted="" playsinline="" loop="">
+              <source src="medias/atelier/atelier2.mp4" type="video/mp4">
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+          </div>
+
       </div>
     </div>
 
 
+    <!-- EDITORIALES -->
     <div id="éditoriales" class="dialog">
 
       <div class="flextest">
          <div class="titlebar">
-           Workshops
+           Editoriales
          </div>
          <button class="close" name="close">
            <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
@@ -94,12 +109,12 @@
       </div>
     </div>
 
-
+    <!-- typographiques -->
     <div id="typographiques" class="dialog">
 
       <div class="flextest">
          <div class="titlebar">
-           Workshops
+           Productions typographiques
          </div>
          <button class="close" name="close">
            <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
@@ -109,16 +124,16 @@
       </div>
 
       <div class="content">
-        <iframe src="https://lacambretypo.be/fr"></iframe>
+        <iframe src="https://lacambretypo.be/fr/typefaces"></iframe>
       </div>
     </div>
 
-
+    <!-- IMPRIMERIE -->
     <div id="imprimerie" class="dialog">
 
       <div class="flextest">
          <div class="titlebar">
-           Workshops
+           Imprimerie
          </div>
          <button class="close" name="close">
            <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
@@ -127,31 +142,50 @@
          </button>
       </div>
 
-      <div class="content">
-        <iframe src="https://lacambretypo.be/fr"></iframe>
+      <div class="content carousel">
+
+          <div class="carousel-items">
+            <video class="items" autoplay="" muted="" playsinline="" loop="">
+              <source src="medias/imprimerie/imprimerie-1.mp4" type="video/mp4">
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+          </div>
+
+          <div class="carousel-items">
+            <video class="items"autoplay="" muted="" playsinline="" loop="">
+              <source src="medias/imprimerie/imprimerie-2.mp4" type="video/mp4">
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+          </div>
+
+          <div class="carousel-items">
+            <video class="items" autoplay="" muted="" playsinline="" loop="">
+              <source src="medias/imprimerie/imprimerie-3.mp4" type="video/mp4">
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+          </div>
+
+          <div class="carousel-items">
+            <video class="items"autoplay="" muted="" playsinline="" loop="">
+              <source src="medias/imprimerie/imprimerie-4.mp4" type="video/mp4">
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+          </div>
+
+          <div class="carousel-items">
+            <img class="items fix-img" src="medias/imprimerie/imprimerie-5.jpg" alt="">
+          </div>
+
+          <div class="carousel-items">
+            <img class="items fix-img" src="medias/imprimerie/imprimerie-6.jpg" alt="">
+          </div>
+
       </div>
+
     </div>
 
 
-
-    <div id="imprimerie" class="dialog">
-
-      <div class="flextest">
-         <div class="titlebar">
-           Workshops
-         </div>
-         <button class="close" name="close">
-           <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
-             <path id="Tracé_1" data-name="Tracé 1" d="M3.678.643a1.267,1.267,0,0,0,.588.335,1.311,1.311,0,0,0,.677,0A1.361,1.361,0,0,0,5.537.643l8.094-8.107L21.752.643a1.268,1.268,0,0,0,.916.376A1.242,1.242,0,0,0,23.6.643a1.274,1.274,0,0,0,.383-.937,1.252,1.252,0,0,0-.369-.923L15.49-9.324l8.121-8.094a1.26,1.26,0,0,0,.369-.93,1.237,1.237,0,0,0-.383-.93,1.29,1.29,0,0,0-.93-.369,1.244,1.244,0,0,0-.916.369L13.631-11.17,5.537-19.277a1.361,1.361,0,0,0-.595-.335,1.361,1.361,0,0,0-.677-.007,1.171,1.171,0,0,0-.588.342,1.3,1.3,0,0,0-.328.595,1.416,1.416,0,0,0,0,.677,1.217,1.217,0,0,0,.328.588l8.094,8.094L3.678-1.217a1.267,1.267,0,0,0-.335.588,1.389,1.389,0,0,0-.007.684A1.171,1.171,0,0,0,3.678.643Z" transform="translate(-3.297 19.659)"/>
-           </svg>
-         </button>
-      </div>
-
-      <div class="content">
-        <iframe src="https://lacambretypo.be/fr"></iframe>
-      </div>
-    </div>
-
+    <!-- WORKSHOPS -->
     <div id="workshops" class="dialog">
 
       <div class="flextest">
@@ -170,12 +204,75 @@
       </div>
     </div>
 
-
+    <!-- EXCURSIONS -->
     <div id="excursions" class="dialog">
 
       <div class="flextest mobile">
          <div class="titlebar">
-           Workshops
+           Excursions - Copenhagen
+         </div>
+         <button class="close" name="close">
+           <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
+             <path id="Tracé_1" data-name="Tracé 1" d="M3.678.643a1.267,1.267,0,0,0,.588.335,1.311,1.311,0,0,0,.677,0A1.361,1.361,0,0,0,5.537.643l8.094-8.107L21.752.643a1.268,1.268,0,0,0,.916.376A1.242,1.242,0,0,0,23.6.643a1.274,1.274,0,0,0,.383-.937,1.252,1.252,0,0,0-.369-.923L15.49-9.324l8.121-8.094a1.26,1.26,0,0,0,.369-.93,1.237,1.237,0,0,0-.383-.93,1.29,1.29,0,0,0-.93-.369,1.244,1.244,0,0,0-.916.369L13.631-11.17,5.537-19.277a1.361,1.361,0,0,0-.595-.335,1.361,1.361,0,0,0-.677-.007,1.171,1.171,0,0,0-.588.342,1.3,1.3,0,0,0-.328.595,1.416,1.416,0,0,0,0,.677,1.217,1.217,0,0,0,.328.588l8.094,8.094L3.678-1.217a1.267,1.267,0,0,0-.335.588,1.389,1.389,0,0,0-.007.684A1.171,1.171,0,0,0,3.678.643Z" transform="translate(-3.297 19.659)"/>
+           </svg>
+         </button>
+      </div>
+
+      <div class="content carousel">
+
+          <div class="carousel-items">
+            <video class="items" autoplay="" muted="" playsinline="" loop="">
+              <source src="medias/copenhagen/copenhagen8.mp4" type="video/mp4">
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+          </div>
+
+          <div class="carousel-items">
+            <img class="items" src="medias/copenhagen/copenhagen1.jpg" alt="">
+          </div>
+
+          <div class="carousel-items">
+            <img class="items" src="medias/copenhagen/copenhagen2.jpg" alt="">
+          </div>
+
+          <div class="carousel-items">
+            <img class="items" src="medias/copenhagen/copenhagen3.jpg" alt="">
+          </div>
+
+          <div class="carousel-items">
+            <img class="items" src="medias/copenhagen/copenhagen4.jpg" alt="">
+          </div>
+
+          <div class="carousel-items">
+            <video class="items" autoplay="" muted="" playsinline="" loop="">
+              <source src="medias/copenhagen/copenhagen5.mp4" type="video/mp4">
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+          </div>
+
+          <div class="carousel-items">
+            <video class="items" autoplay="" muted="" playsinline="" loop="">
+              <source src="medias/copenhagen/copenhagen6.mp4" type="video/mp4">
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+          </div>
+
+          <div class="carousel-items">
+            <video class="items" autoplay="" muted="" playsinline="" loop="">
+              <source src="medias/copenhagen/copenhagen7.mp4" type="video/mp4">
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+          </div>
+
+      </div>
+    </div>
+
+    <!-- JURY -->
+    <div id="jury" class="dialog">
+
+      <div class="flextest">
+         <div class="titlebar">
+           Jury
          </div>
          <button class="close" name="close">
            <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
@@ -189,11 +286,12 @@
       </div>
     </div>
 
+    <!-- LIVE -->
     <div id="live" class="dialog">
 
       <div class="flextest">
          <div class="titlebar">
-           Workshops
+           Live ●
          </div>
          <button class="close" name="close">
            <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
@@ -214,7 +312,8 @@
       </div>
     </div>
 
-    <div id="excursions" class="dialog">
+    <!-- WORKSHOPS -->
+    <div id="chat" class="dialog">
 
       <div class="flextest">
          <div class="titlebar">
@@ -228,34 +327,16 @@
       </div>
 
       <div class="content">
-        <iframe src="https://lacambretypo.be/fr"></iframe>
+        <iframe src="http://ateliertypo.chatango.com"></iframe>
       </div>
     </div>
-
-
-    <div id="jury" class="dialog">
-
-      <div class="flextest">
-         <div class="titlebar">
-           Workshops
-         </div>
-         <button class="close" name="close">
-           <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
-             <path id="Tracé_1" data-name="Tracé 1" d="M3.678.643a1.267,1.267,0,0,0,.588.335,1.311,1.311,0,0,0,.677,0A1.361,1.361,0,0,0,5.537.643l8.094-8.107L21.752.643a1.268,1.268,0,0,0,.916.376A1.242,1.242,0,0,0,23.6.643a1.274,1.274,0,0,0,.383-.937,1.252,1.252,0,0,0-.369-.923L15.49-9.324l8.121-8.094a1.26,1.26,0,0,0,.369-.93,1.237,1.237,0,0,0-.383-.93,1.29,1.29,0,0,0-.93-.369,1.244,1.244,0,0,0-.916.369L13.631-11.17,5.537-19.277a1.361,1.361,0,0,0-.595-.335,1.361,1.361,0,0,0-.677-.007,1.171,1.171,0,0,0-.588.342,1.3,1.3,0,0,0-.328.595,1.416,1.416,0,0,0,0,.677,1.217,1.217,0,0,0,.328.588l8.094,8.094L3.678-1.217a1.267,1.267,0,0,0-.335.588,1.389,1.389,0,0,0-.007.684A1.171,1.171,0,0,0,3.678.643Z" transform="translate(-3.297 19.659)"/>
-           </svg>
-         </button>
-      </div>
-
-      <div class="content">
-        <iframe src="https://lacambretypo.be/fr"></iframe>
-      </div>
-    </div>
+    <!-- Programme -->
 
     <div id="programme" class="dialog">
 
       <div class="flextest">
          <div class="titlebar">
-           Workshops
+           Programme
          </div>
          <button class="close" name="close">
            <svg xmlns="http://www.w3.org/2000/svg" width="20.684" height="20.68" viewBox="0 0 20.684 20.68">
@@ -265,7 +346,7 @@
       </div>
 
       <div class="content">
-        <iframe src="https://lacambretypo.be/fr"></iframe>
+        <iframe src="https://lacambretypo.be/fr/news/portes-ouvertes-irl-url-1921-mars-2021"></iframe>
       </div>
     </div>
 

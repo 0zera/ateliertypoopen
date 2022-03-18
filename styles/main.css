@@ -18,9 +18,8 @@ html, body, div, span, applet, object, iframe,
   	font-size: 100%;
   	font: inherit;
   	vertical-align: baseline;
-    box-sizing: border-box;
-}
 
+  }
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure,
   footer, header, hgroup, menu, nav, section {
@@ -45,6 +44,7 @@ html, body, div, span, applet, object, iframe,
   	border-spacing: 0;
   }
 
+
 /* FIX FONT SIZE */
 
 :root{
@@ -55,93 +55,79 @@ html, body, div, span, applet, object, iframe,
   --global-font-size: 2.2rem;
   --global-margins: 1.4rem;
   --global-line-height: 2.5rem;
-  --bg-color: lightgray;
 }
-
 @font-face {
     font-family: 'L10';
     src: url('../fonts/L10-Regular.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'atrakt';
     src: url('../fonts/atraktGX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'Bright Hope';
     src: url('../fonts/BrightHopeGX.ttf') format('truetype');
     font-weight: 900!important;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'atrakt';
     src: url('../fonts/atraktGX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'Carlos';
     src: url('../fonts/CarlosGX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'Fonte variable';
     src: url('../fonts/FontevariableGX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'Ceefax';
     src: url('../fonts/CeefaxGX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'Gothic Revival 1';
     src: url('../fonts/GothicRevival1GX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
-
 @font-face {
-  font-family: 'La Curieuse';
+    font-family: 'La Curieuse';
     src: url('../fonts/LaCurieuseGX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'Notam Standard';
     src: url('../fonts/NotamStandardGX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'TOAD.22.12';
     src: url('../fonts/TOAD.GX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'VG_Aldiviva_07';
     src: url('../fonts/Aldiviva_GX.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'Ziggy Sans';
     src: url('../fonts/ZiggySansGX.ttf') format('truetype');
@@ -150,15 +136,13 @@ html, body, div, span, applet, object, iframe,
 }
 
 html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-  font-family: 'L10';
+    max-width: 100%;
+    overflow-x: hidden;
 }
-
 body{
   font-size: var(--global-font-size);
   line-height: var(--global-line-height);
-  background: var(--bg-color);
+  background-color: lightgray;
   overflow: hidden!important;
 
   /*
@@ -171,26 +155,30 @@ body{
 main{
   padding: var(--global-margins);
   padding-top: calc(var(--global-margins) - 4px);
+  /*height: calc(100vh - 12rem);*/
+
+  font-weight: lighter;
+  font-variation-settings: 'wght' 0;
+  transition-duration: 0.5s;
+
   overflow: hidden!important;
 }
 
 span{
   color: blue;
   cursor: pointer;
-  font-weight: lighter;
-  font-variation-settings: 'wght' 0;
-  transition: font-variation-settings .8s;
+  transition-duration: 0.5s;
 }
-
 span:hover{
+  /*font-family: "TOAD.22.12" !important;*/
   font-weight: bolder;
   font-variation-settings: 'wght' 900;
+  transition-duration: 0.5s;
 }
 
 span::after{
   content: "]"
 }
-
 span::before{
   content: "["
 }
@@ -211,20 +199,13 @@ nav{
 .links{
   margin-right: var(--global-margins);
 }
-
 .links a{
   text-decoration: none;
   color: black;
-  cursor: alias;
-  margin-right: 1rem;
 }
-
-.links a:last-child{
-  margin-right: : 0;
-}
-
 #switchfont{
-  background: black;
+  background-color: lightgray;
+  background-color: black;
   color: white;
   border: none;
   padding: 5px;
@@ -232,34 +213,81 @@ nav{
   padding-right: 1rem;
   border-radius: 2rem;
   text-align: left;
-  margin-left: var(--global-margins);
-  -webkit-box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.2);
-  box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.2);
 
   font-size: var(--global-font-size);
+  margin-left: var(--global-margins);
+
   font-family: inherit;
-  font-variation-settings: 'wght' 0;
-  transition: font-variation-settings .8s;
+  -webkit-box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.2);
+}
+#switchfont:hover{
+  background-color: black;
+  color: white;
+}
+.links a{
+  margin-right: 1rem;
+}
+.links a:last-child{
+  margin-right: : 0;
 }
 
-#switchfont:hover{
-  background: black;
-  color: white;
-  cursor: pointer;
-  font-variation-settings: 'wght' 900;
-}
 
 .content{
   border-radius: 1.5rem;
   width: 380px;
   height: 580px;
-  overflow: hidden!important;
+  overflow-y: hidden;
+  /*border: solid rgba(0,0,0,0.64) 30px;*/
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.5);
+
+  /* CHECK FOR MOBILE */
+  margin: 7px;
+  margin-top: 0px;
 }
+
+
 
 .landscape{
   border-radius: 1.5rem;
   width: 550px;
   height: 309px;
+}
+.carousel{
+  background-color: black;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+
+}
+
+.carousel .carousel-items{
+
+  width: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.carousel-items video{
+display: block;
+width: 100%;
+}
+
+.carousel-items video source{
+display: block;
+width: 100%;
+}
+.carousel-items img{
+display: block;
+width: 100%;
+}
+
+.fix-img{
+  display: block;
+  height: 100%;
+  width: auto!important;
 }
 
 .dialog iframe{
@@ -268,19 +296,19 @@ nav{
   height: 100%;
   background-color: white;
 }
-
 .dialog {
 	display: none; /* not visible by default */
+	color: red;
 	position: absolute;
-  /* color: white; */
-  overflow: auto;
+
+  color: white;
   font-size: 1em;
-  overflow: hidden!important;
+
+  overflow-y: hidden;
+
+  border-radius: 1.5rem;
 }
 
-.dialog .content {
-  background: var(--bg-color);
-}
 
 .titlebar {
 	height: 35px; /* same as .dialog>button height */
@@ -298,29 +326,43 @@ nav{
   border-radius: 100px;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+
   font-size: 1.9rem;
+
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.5);
+
+
 }
+
 
 .flextest{
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 1rem;
-}
+  margin-bottom: 0rem;
 
+  /* CHECK FOR MOBILE */
+  margin: 7px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+
+}
 .close{
   background-color: black;
   border-radius: 100px;
   border: none;
   width: 40px;
   height: 35px; /* same as .dialog>button height */
-}
 
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.5);
+
+}
 .close svg{
   fill: white;
   height: 14px;
   width: 13px;
 }
-
 .dialog .buttonpane:before {
 	width: 100%;
 	height: 0;
@@ -329,7 +371,6 @@ nav{
 	position: absolute;
 	top: -16px; /* change allowed */
 }
-
 .dialog .buttonpane {
 	width: 100%;
 	position: absolute;
@@ -337,12 +378,19 @@ nav{
 	right: 16px; /* change NOT allowed */
 	white-space: nowrap; /* keep buttons on one line */
 }
+#liveloop{
+  animation: color-change 1s infinite;
+}
 
-
-
+@keyframes color-change {
+  0% { color: red; }
+  50% { color: blue; }
+  100% { color: red; }
+}
 
 /* MOBILE*/
 @media (max-width: 600px){
+
   :root{
     /* VARIABLES FOR MOBILE*/
     --global-font-size: 1.8rem;
@@ -355,12 +403,10 @@ nav{
     flex-direction: column;
     align-items: flex-end;
   }
-
   .links a{
     margin-right: 0px;
 
   }
-
   nav{
     align-items: flex-end;
   }
@@ -397,6 +443,7 @@ nav{
 
   .dialog{
     margin-top: 15px;
+
     /*
     -webkit-box-shadow: 0px 0px 0px 1500px rgba(255,255,255,0.46);
     box-shadow: 0px 0px 0px 1509px rgba(255,255,255,0.46);
